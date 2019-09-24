@@ -20,6 +20,4 @@ set -o pipefail
 
 ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 
-reset_sa(){
-  $(terraform output --state="../../terraform/terraform.tfstate" get_credentials)
-}
+$(terraform output --state="../../terraform/terraform.tfstate" get_credentials)
