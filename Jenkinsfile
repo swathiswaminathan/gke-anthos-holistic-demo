@@ -150,7 +150,6 @@ spec:
       container(containerName) {
         dir('holistic-demo/binary-auth'){
           try {
-            sh "gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}"
             sh "make validate"
           } catch (err){
             currentBuild.result = 'FAILURE'
